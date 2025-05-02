@@ -1,0 +1,138 @@
+.status{
+    font-family: Calibri;
+    font-size: 32px;
+}
+
+.itemholder{
+    display: grid;
+    grid-template-columns: 2.8fr 1.2fr;
+    grid-template-rows: max-content 1fr;
+
+    column-gap: 45px;
+    row-gap: 40px;
+}
+
+.productholder{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    height: min-content;
+}
+
+.product{
+    padding:10px;
+    display: grid;
+    grid-template-columns: 2fr 10fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 20px;
+    border: 1px solid rgb(180,180,180);
+}
+
+.cartimage{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    aspect-ratio: 3.5 / 3;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    max-width: 200px;
+}
+
+.cartname{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    font-family: calibri;
+    font-size: 18px;
+}
+
+.cartprice{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    font-family: calibri;
+    font-size: 18px;
+}
+.green{
+    color:rgba(47,120,70,1);
+}
+.cartqty{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    font-family: calibri;
+}
+
+
+.cartremove{
+    border: 1px solid;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: grid;
+    justify-self: center;
+    justify-items: center;
+    aspect-ratio: 1.1/1;
+    transform: scale(1.04);
+}
+
+.cartremove:hover{
+    background-color: rgb(226, 72, 72);
+    border: 0px;
+    color: white;
+}
+
+.cartfinal{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+
+.carttotal{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    font-family: calibri;
+    font-size: 20px;
+    justify-self: center;
+}
+.cartpayout{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: transparent;
+    border: 1px solid rgb(180,180,180);
+}
+
+.cartpayout:hover{
+    font-size: 20px;
+    background-color: rgb(61, 159, 92);
+    color: white;
+    border: 0px;
+
+    transition: all 0.1s ease;
+}
+
+.product:hover{
+    cursor: pointer;
+}
+
+

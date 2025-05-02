@@ -1,0 +1,65 @@
+.navbar{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 4fr 1fr 1fr 1fr 0.5fr 1fr;
+    column-gap:10px;
+    padding:10px;
+    border-bottom: 1px solid rgb(180,180,180);
+}
+.navbar *{
+    line-height: 15px;
+    
+}
+button{
+    color:rgba(47,120,70,1);
+    font-size: 16px;
+    background-color: transparent;
+    border: 0px solid rgb(180,180,180);
+    /* font-weight: bold; */
+}
+.navbarlogo{
+    transform: scale(2.2);
+    display: grid;
+    justify-content: center;
+    place-content: center;
+    font-family: calibri;
+    font-weight: bold;
+}
+.navbaraddr{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding:8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.deliver{
+    font-family: calibri;
+    font-weight: bold;
+}
+.addr{
+    font-family: calibri;
+    font-size: 12px;
+}
+
+.quantity{
+    font-family: helvetica;
+}
+
+.home{
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+.product{
+    grid-column-start: 6;
+    grid-column-end: 7;
+}
+
+
+
+button:hover{
+    cursor: pointer;
+    background-color: rgba(40,40,40,0.1);
+    transition: all 0.2s ease;
+}

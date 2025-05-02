@@ -1,0 +1,71 @@
+.makehoverpointer{
+    cursor: pointer;
+}
+
+.suggest{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr 5fr;
+    column-gap: 10px;
+}
+
+.suggestion{
+    font-size: 22px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.plate{
+    padding:10px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 350px;
+
+    border:1px solid;
+    display: grid;
+
+    grid-template-rows: 4fr 1fr 0.75fr;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.plateimg{
+    border:1px solid;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 3.5 / 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.platename{
+    overflow: hidden;
+    margin-top:4px;
+    margin-bottom: 4px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.plateprice{
+    display: grid;
+    place-content:center;
+    justify-content: start;
+    margin-top: 0px;
+    height: 100%;
+}
+.platecart{
+    margin-top: 0px;
+    height: 100%;
+
+}
+
+.indicationfont{
+    font-size: 16px;
+    font-family: calibri;
+}

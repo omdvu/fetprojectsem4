@@ -1,0 +1,16 @@
+<div class = "landing">
+    <div class = "maindashboard">
+        <p class = "complement">Welcome back, <strong>{{userName[0]}}</strong></p>
+    </div>
+    <div class="category">
+        <p class="categoryname">Categories</p>
+        <br>
+        <div class = "categorylist">
+            <button (click)="getData('electronics')" routerLink="products/list">Electronics</button>
+            <button (click)="getData('furniture')" routerLink="products/list">Furniture</button>
+            <button (click)="getData('clothes')" routerLink="products/list">Clothing</button>
+            <button (click)="getData('misc')" routerLink="products/list">Miscellaneous</button>
+        </div>
+    </div>
+    <app-prev-order></app-prev-order>
+</div>

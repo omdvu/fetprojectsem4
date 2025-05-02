@@ -1,0 +1,18 @@
+<p class="categorytitle">You searched for <strong [style.color]="categorytheme">{{category}}</strong></p>
+<div class="productholder">
+    @if(data){
+        @for(product of data;track $index){
+            <div class="product makehoverpointer" (click)="setProd(product)" routerLink="/home/view">
+                <img [src]="product.images[0]" alt="No photo available" class="productimg">
+                <p class="productname">{{product.title}}</p>
+                <div class="productdesc">{{product.description}}</div>
+                <p class="productprice"><strong>${{product.price}}</strong></p>
+                <p class="productcategory">Category: <span [style.color]="categorytheme">{{product.category.name}}</span></p>
+                <div class="productbuttons">
+                    <button class = "makehoverpointer" (click)="add(product);$event.stopPropagation()">Add to Cart</button>
+                    <button class = "makehoverpointer" (click)="setProd(product)" routerLink="/home/view">View Product</button>
+                </div>
+            </div>
+        }
+    }
+</div> 

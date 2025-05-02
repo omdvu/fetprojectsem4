@@ -1,0 +1,77 @@
+<div class="maintemplate">
+    <div class = "header">
+        Welcome to Sahara!<br>
+        Please Sign-Up
+    </div>
+
+    <form class = "logform" (ngSubmit)="authorize($event)" #signupForm="ngForm">
+        <table> 
+            <tr>
+                <td><label class="indicationfont" for="fullname">Name</label></td>
+                <td><input placeholder="Enter name" type="text" name="fullname" id="fullname" [(ngModel)]="userObj.username" #username = "ngModel" required [class.invalid]="username.invalid && username.touched"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><p *ngIf = "username.invalid && formSubmitted" class = "wrongmsg">Username required</p></td>
+            </tr>
+            <tr>
+                <td><label class="indicationfont" for="mail">Mail</label></td>
+                <td><input placeholder="Enter mail" type="email" name="mail" id="mail" [(ngModel)]="userObj.usermail" #usermail = "ngModel" required [class.invalid]="usermail.invalid && usermail.touched"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><p *ngIf = "usermail.invalid && formSubmitted" class = "wrongmsg">Mail required</p></td>
+            </tr>
+            <tr>
+                <td><label class="indicationfont" for="password">Password</label></td>
+                <td><input placeholder="Enter password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[/*-+=_!@#$%&]).{8,}$" type="password" name="password" id="password" [(ngModel)]="userObj.userpass" #userpass = "ngModel" required [class.invalid]="userpass.invalid && userpass.touched"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><p class = "wrongmsg" *ngIf = "userpass.invalid && formSubmitted && !validatePassword(this.userObj.userpass)">Required atleast a capital and small letter, a number and special character</p></td>
+            </tr>
+            <tr>
+                <td><label class="indicationfont" for="cpassword">Confirm Password</label></td>
+                <td><input placeholder="Confirm password" type="password" name="cpassword" id="cpassword" required [(ngModel)]="conpassword" #conpass = "ngModel" [class.invalid]="conpass.invalid && conpass.touched"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><p class = "wrongmsg" *ngIf = "conpass.invalid && formSubmitted">Password required</p></td>
+            </tr>
+            <tr>
+                <td><label class="indicationfont" for="address">Address</label></td>
+                <td>
+                    <input placeholder="Enter address" type = "text" name="address" id="address" required [(ngModel)] = "userObj.useraddr" #address = "ngModel" [class.invalid]="address.invalid && address.touched">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><p class = "wrongmsg" *ngIf = "address.invalid && formSubmitted">Address required</p></td>
+            </tr>
+            @if(showWarning){
+                <tr>
+                    <td colspan="2">
+                        <p class = "wrongmsg">{{messageWarning}}</p>
+                        
+                        
+                    </td>
+                </tr>
+            }
+            @if(showmsg){
+                <tr>
+                    <td colspan="2">
+                        <p class="servermsg">{{finalmsg}}</p>
+                    </td>
+                </tr>
+                
+            }
+            
+            <br>
+            <tr>
+                <td colspan="2"><button class = "submitbutton" type = "submit">Sign Up</button></td>
+                
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span class = "signupbutton">Already have an account? <a routerLink="/login">Sign in</a></span>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<router-outlet></router-outlet>

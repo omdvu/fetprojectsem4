@@ -1,0 +1,22 @@
+<div class="category">
+    <button class = "categorybutton elec" (click)="getData('electronics')" routerLink="list">Electronics</button>
+    <button class = "categorybutton furn" (click)="getData('furniture')" routerLink="list">Furniture</button>
+    <button class = "categorybutton clot" (click)="getData('clothes')" routerLink="list">Clothes</button>
+    <button class = "categorybutton misc" (click)="getData('misc')" routerLink="list">Miscellaneous</button>
+</div>
+
+<div class="suggest">
+    <p class = "suggestion">You would also like</p>
+    @if(allProds){
+        @for(i of indexes;track $index){
+            <div class = "plate makehoverpointer" routerLink="/home/view" (click)="setProd(allProds[i])">
+                <img [src]="allProds[i].images[0]" alt="No photo available" class="plateimg">
+                <p class="platename">{{allProds[i].title}}</p>
+                <p class="plateprice">${{allProds[i].price}}</p>
+                <button class="platecart makehoverpointer" (click)="$event.stopPropagation();add(allProds[i])">Add to Cart</button>
+            </div>
+        }
+    }
+</div>
+
+

@@ -1,0 +1,64 @@
+.header{
+    font-size: 28px;
+    margin: 0px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: Calibri;
+}
+
+.order{
+    border: 1px solid rgb(180,180,180);
+    padding:10px;
+    display: grid;
+    row-gap: 10px;
+    max-height: 380px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.productlist{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 4fr 10fr 1fr;
+}
+
+.listorders{
+    column-gap: 5px;
+}
+
+.listorders:hover{
+    background-color: rgba(180, 180, 180, 0.1);
+    cursor: pointer;
+}
+.img{
+    background-position: center;
+    background-size: cover;
+}
+.img:hover{
+    transform: scale(1.4);
+    transition: all 0.2s ease;
+}
+.productname{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    font-family: Calibri;
+    padding-left: 5px;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+.productqty{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    font-family: Calibri;
+    display: grid;
+    align-items: center;
+    color:rgba(47,120,70,1);
+}
+
+.status{
+    font-family: Calibri;
+    font-size: 15px;
+}

@@ -1,0 +1,143 @@
+.viewplace{
+    column-gap: 10px;
+    display: grid;
+    grid-template-columns: 2.8fr 1.2fr;
+}
+
+.producttemplate{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1.25fr;
+    column-gap: 10px;
+    height: 401.5px;
+}
+
+.imgplace{
+    display: grid;
+    grid-template-rows: 3.5fr 2.5fr;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 5px;
+    column-gap: 5px;
+}
+.dataholder{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    display: grid;
+    grid-template-columns: 0.9fr 0.1fr;
+    column-gap: 20px;
+}
+
+.image{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.productimg1{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    
+}
+
+.productimg2{
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+}
+
+.productinfo{
+    padding: 10px;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4,max-content);
+
+    border:1px solid rgb(180,180,180);
+}
+
+.productname{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 22px;
+    
+}
+.productcategory{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+
+    align-self: center;
+    font-family: Calibri;
+    font-size: 13px;
+}
+
+.productdesc{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    font-family: Calibri;
+    font-size: 15px;
+}
+
+.productprice{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    color: rgba(47,120,70,1);
+    font-weight: bold;
+    font-family: calibri;
+    font-size: 20px;
+}
+
+.productqty{
+    font-family: Calibri;
+    font-size: 18px;
+    align-self: center;
+}
+input{
+    width: 5%;
+}
+button{
+    height: 40px;
+    background-color: rgba(47,120,70,1);
+    border: 0px solid;
+    color: white;
+}
+button:hover{
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid rgba(47,120,70,1);
+    color: black;
+    transition: all 0.2s ease;
+}
+
+.suggestion{
+    font-family: calibri;
+    font-size: 26px;
+}
+.platename{
+    font-family: calibri;
+    font-size: 17px;
+}
+.plateprice{
+    font-family: calibri;
+    color:rgba(47,120,70,1);
+    font-size:19px;
+}

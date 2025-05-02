@@ -1,0 +1,43 @@
+<div class="maintemplate">
+    <div class = "header">Login</div>
+    <form class = "logform" (ngSubmit)="authorise($event)" #signupForm="ngForm">
+        <table>
+            <tr>
+                <td><label class="indicationfont" for="mail">Mail</label></td>
+            </tr>
+            <tr>
+                <td><input type="email" name="mail" placeholder="Enter mail" id="mail" [(ngModel)]="userObj.usermail" required #mail="ngModel" [class.invalid]="mail.invalid && mail.touched"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p *ngIf = "mail.invalid && formSubmitted" class = "errormsg">This is required</p>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="indicationfont" for="pass">Password</label></td>
+            </tr>
+            <tr>
+                
+                <td><input type="password" placeholder="Enter password" name="pass" id="pass" [(ngModel)]="userObj.userpass" required #passw="ngModel" [class.invalid]="passw.invalid && passw.touched"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p *ngIf = "passw.invalid && formSubmitted" class = "errormsg">This is required</p>
+                    <p *ngIf="displayError" class = "wrongmsg">{{errMsg}}</p>
+                </td>
+            </tr>
+            <br>    
+            <tr>
+                <td><button type="submit" class = "submitbutton">Sign in</button></td>
+            </tr>
+            <tr>
+                <td>
+                    <span class = "signupbutton">Don't have an account? <a routerLink="/signup">Sign up</a></span>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+<router-outlet></router-outlet>

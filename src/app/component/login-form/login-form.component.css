@@ -1,0 +1,76 @@
+.maintemplate{
+    border: 1px solid rgb(180,180,180);
+    place-self: center;
+    margin-top: 100px;
+    width: 22%;
+}
+.logform{
+    height: fit-content;
+    padding: 15px;
+}
+
+input{
+    position: relative;
+    left: 0px;
+    width: 94%;
+    border: 1px solid rgb(180,180,180);
+    padding:7px;
+    margin: 0px;
+    
+}
+
+.header{
+    display: grid;
+    justify-items: center;
+    padding:10px;
+    font-size: 32px;
+    font-family: Calibri;
+    font-weight: bold;
+}
+
+table{
+    position: relative;
+    top:-20px;
+    width: 100%;
+}
+
+.submitbutton{
+    
+    background-color: rgba(0,125,255,255);
+    border: 0px;
+    padding:6px;
+    width: 100%;
+    color: white;
+}
+
+.signupbutton{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.submitbutton:hover{
+    background-color: rgba(0,105,255,1);
+    cursor: pointer;
+}
+
+a{
+    color: rgba(34,138,247,255);
+    text-decoration: none;
+}
+
+.errormsg{
+    margin: 0px;
+    font-size: 13px;
+    text-indent: 10px;
+    color: red;
+    font-family: calibri;
+}
+
+.wrongmsg{
+    margin: 0px;
+    font-size: 15px;
+    text-indent: 0px;
+    color: red;
+    font-family: calibri;
+}

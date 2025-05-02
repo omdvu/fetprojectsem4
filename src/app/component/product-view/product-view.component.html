@@ -1,0 +1,48 @@
+<div class="viewplace">
+    @if(product){
+        <div class = "producttemplate">
+            <div class = "imgplace">
+                <div [style.background-image]="'url(' + product.images[0] + ')'" alt="idk" class="productimg1 image"></div>
+                <div [style.background-image]="'url(' + product.images[1] + ')'" alt="idk" class="productimg2 image"></div>
+                <div [style.background-image]="'url(' + product.images[2] + ')'" alt="idk" class="productimg2 image"></div>
+            </div>
+
+            <div class="productinfo">
+                <div class="dataholder">
+                    <p class="productname">{{product.title}}</p>
+                    <p class="productcategory">Category: <span [style.color]="green">{{product.category.name}}</span></p>
+                </div>
+                
+
+                <div class="productdesc">{{product.description}}</div>
+                
+                <p class="productprice">${{product.price}}</p>
+                
+                <div class = "productqty">
+                    <label for="qty">Quantity: </label>
+                    <input type="text" value = "1" name="qty" id="qty" [(ngModel)]="prodqty">
+                </div>
+                <button (click)="add()">Add to Cart</button>
+            </div>
+        </div>
+    }
+    @else{
+        <p>Cannot display product</p>
+    }
+    
+    <app-prev-order></app-prev-order>
+</div>
+
+<div class="suggest">
+    <p class = "suggestion">You might also like</p>
+    @if(allProds){
+        @for(i of indexes;track $index){
+            <div class = "plate makehoverpointer" routerLink="/home/view" (click)="setProd(allProds[i])">
+                <img [src]="allProds[i].images[0]" alt="No photo available" class="plateimg">
+                    <p class="platename">{{allProds[i].title}}</p>
+                    <p class="plateprice">${{allProds[i].price}}</p>
+                <button class="platecart makehoverpointer" (click)="$event.stopPropagation();add2(allProds[i])">Add to Cart</button>
+            </div>
+        }
+    }
+</div>

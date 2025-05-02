@@ -1,0 +1,91 @@
+.productholder{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 40px;
+    column-gap: 10px;
+}
+
+.product{
+    padding: 8px;
+    display: grid;
+    grid-template-rows: 4fr 1fr 1.25fr 1fr 0.75fr;
+    grid-template-columns: repeat(2,1fr);
+    height: 480px;
+    border: 1px solid rgb(180,180,180);
+}
+
+.productimg{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 3.5 / 3;
+}
+.productimg:hover{
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+.productname{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    min-height: 30px;
+    font-weight: bold;
+    font-family: Calibri;
+    font-size: 19px;
+}
+
+.productdesc{
+    grid-column-start: 1;
+    grid-column-end: 3; 
+    overflow-y: hidden;
+    position: relative;
+    padding-right: 10px;
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    font-family: calibri;
+    font-size: 14px;
+}
+
+.productbuttons{
+    grid-column-start: 1;
+    grid-column-end: 3; 
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 5px;
+}
+button{
+    color: white;
+    background-color: rgb(68, 131, 88);
+    border: 0px solid;
+    font-size: 14px;
+}
+
+button:hover{
+    background-color: transparent;
+    color: rgba(47,120,70,1);
+
+    transition: all 0.2s ease;
+}
+
+.categorytitle{
+    font-family: calibri;
+    font-size: 28px;
+    line-height: 0;
+}
+
+.productprice{
+    font-family: Calibri;
+    color:rgba(47,120,70,1);
+    font-size: 20px;
+}
+
+.productcategory{
+    display: grid;
+    justify-self: end;
+    font-size: 13px;
+    font-family: Calibri;
+    padding-right: 10px;
+    
+}

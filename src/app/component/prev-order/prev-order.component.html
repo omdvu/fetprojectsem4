@@ -1,0 +1,18 @@
+<div class="order">
+    <p class = "header">Your Orders</p>
+    @if(userOrders){
+        @for(order of userOrders;track $index){
+            <div (click)="setProd(order)" routerLink="/home/view" class = "listorders">
+                
+                <div class="productlist">
+                     <div class = "img" [style.backgroundImage]="'url(' + order.images[0] + ')'"></div>
+                     <p class = "productname">{{order.title}}</p>
+                     <p class="productqty">${{order.price}}</p>
+                </div>
+            </div>
+        }
+    }
+    @else{
+        <p class = "status">You have not bought anything yet</p>
+    }
+</div>

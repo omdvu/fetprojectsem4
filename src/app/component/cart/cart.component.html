@@ -1,0 +1,27 @@
+<div class="itemholder">
+    @if(finalStatus){
+        <div>{{finalStatus}}</div>
+    }   
+    @if(userCart){
+        <div class="productholder">
+            @for(item of userCart;track $index){
+                <div class = "product" (click)="setProd(item)" routerLink="/home/view">
+                    <div class="cartimage" [style.background-image]="'url(' + item.images[0] + ')'" alt="idk"></div>
+                    <p class="cartname">{{item.title}}</p>
+                    <p (click)="remove($index);$event.stopPropagation()" class = "cartremove">x</p>
+                    <p class="cartprice green"><strong>${{item.price}}</strong></p>
+                    <p class="cartqty">Quantity: <span class = "green">{{item.qty}}</span></p>
+                </div>
+            }   
+        </div>
+        
+        <div class = "cartfinal">
+            <p class="carttotal">Subtotal: <span class = "green">${{totalCart}}</span></p>
+            <button (click)="buy()" class = "cartpayout makehoverpointer">Place Order</button>
+        </div>
+    }
+    @else {
+        <div class = "status">Your cart is empty</div>
+    }
+    <app-prev-order></app-prev-order>
+</div>
